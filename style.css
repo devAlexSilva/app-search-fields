@@ -1,0 +1,43 @@
+:root {
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+h1 {
+  text-align: center;
+}
+.main {
+  max-width: 400px;
+  width: 80%;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+input[type="text"] {
+  padding: 0.3rem;
+}
+#btn {
+  padding: 0.5rem 0;
+  width: 50%;
+  border-radius: 1rem;
+  border: 1px solid #000;
+  outline: none;
+  background-color: rgba(222, 228, 222, 0.933);
+  left: 50%;
+  transform: translateX(50%);
+}
+
+#btn:hover {
+  background-color: rgba(186, 189, 186, 0.933);
+}
