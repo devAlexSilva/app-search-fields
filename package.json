@@ -1,0 +1,15 @@
+{
+  "name": "electron-al",
+  "version": "1.0.0",
+  "description": "search NSU by orderId",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "devAlexSilva",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^21.3.0"
+  }
+}
