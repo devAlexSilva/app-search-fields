@@ -4,6 +4,7 @@ export function exec() {
       .then((response) => response.json())
 
     console.log(response)
+    return response.title
   };
 
   const inputOrderId = document.querySelector("#orderId");
