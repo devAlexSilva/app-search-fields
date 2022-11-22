@@ -9,7 +9,8 @@ export function exec() {
 
   const inputOrderId = document.querySelector("#orderId");
   const inputResultado = document.querySelector("#result");
-  const btn = document.querySelector("#btn");
+  const btnSearch = document.querySelector("#btn-search");
+  const btnCopy = document.querySelector("#btn-copy");
   
   inputOrderId.addEventListener("keydown", async (e) => {
     if(e.keyCode !== 13) return
@@ -17,7 +18,12 @@ export function exec() {
     inputResultado.value = await api(e.target.value)
   });
   
-  btn.addEventListener("click", async () => {
+  btnSearch.addEventListener("click", async () => {
     inputResultado.value = await api(inputOrderId.value)
+  });
+
+  btnCopy.addEventListener("click", async () => {
+    let text = inputResultado.value
+    await navigator.clipboard.writeText(text)
   });
 }

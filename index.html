@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Buscador de NSU</title>
-  </head>
-  <body>
-    <h1>Informe o código disponível no campo "Emissor"</h1>
-    <main class="main">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Buscador de NSU</title>
+</head>
+
+<body>
+  <h1>Informe o código disponível no campo "Emissor"</h1>
+  <main class="main">
+    <div class="field-order">
+      <label for="orderId">Emissor:</label>
       <input type="text" id="orderId" placeholder="123654789-01" />
-      <input type="text" id="result" />
-      <button id="btn">BUSCAR</button>
-    </main>
-    <script type="module">
-      import { exec } from "./api.js";
-      exec();
-    </script>
-  </body>
+    </div>
+    <div class="field-nsu">
+      <div>
+        <label for="result">NSU:</label>
+        <input type="text" id="result" />
+      </div>
+      <button id="btn-copy">COPIAR</button>
+    </div>
+    <button id="btn-search">BUSCAR</button>
+  </main>
+  <script type="module">
+    import { exec } from "./api.js";
+    exec();
+  </script>
+</body>
+
 </html>
