@@ -11,9 +11,13 @@ export function exec() {
   const inputResultado = document.querySelector("#result");
   const btn = document.querySelector("#btn");
   
-  let inputValue = "";
-
-  inputOrderId.addEventListener("change", (e) => inputValue = (e.target.value));
+  inputOrderId.addEventListener("keydown", async (e) => {
+    if(e.keyCode !== 13) return
+    
+    inputResultado.value = await api(e.target.value)
+  });
   
-  btn.addEventListener("click", async () => inputResultado.value = await api(inputValue));
+  btn.addEventListener("click", async () => {
+    inputResultado.value = await api(inputOrderId.value)
+  });
 }
