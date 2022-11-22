@@ -11,6 +11,7 @@ export function exec() {
   const inputResultado = document.querySelector("#result");
   const btnSearch = document.querySelector("#btn-search");
   const btnCopy = document.querySelector("#btn-copy");
+  const popup = document.getElementById("myPopup");
   
   inputOrderId.addEventListener("keydown", async (e) => {
     if(e.keyCode !== 13) return
@@ -25,5 +26,7 @@ export function exec() {
   btnCopy.addEventListener("click", async () => {
     let text = inputResultado.value
     await navigator.clipboard.writeText(text)
+
+    popup.classList.toggle("show");
   });
 }
